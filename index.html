@@ -1,156 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Projects</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <style>
-    .feature-icon {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0.75rem;
+  <meta charset="UTF-8">
+  <title>Akhil's Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-}
-    
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: white;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 100px 0;
+      background: linear-gradient(120deg, #e0f7fa, #ffffff);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .rounded-circle {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    .dark-mode .card {
+      background-color: #1f1f1f;
+      color: white;
+    }
+
+    .dark-mode .navbar {
+      background-color: #222 !important;
+    }
+
+    .toggle-theme {
+      cursor: pointer;
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      margin-top: 3rem;
+      padding-top: 2rem;
+    }
   </style>
 </head>
-<body style="background-color: ghostwhite;">
-<!-- Navigation Bar -->
-    <div class="container" >
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4"></span>
-        </a>
+<body>
 
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="./" class="nav-link" aria-current="page" routerLinkActive='active'>Home</a></li>
-<!--            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>-->
-            <li class="nav-item"><a href="./about" class="nav-link" routerLinkActive='active'>About</a></li>
-            <li class="nav-item"><a href="./contact" class="nav-link" routerLinkActive='active'>Contact</a></li>
-            <!-- Drop down menu for stocks -->   
-        </ul>
-        </header>
-    </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3 sticky-top">
+  <a class="navbar-brand" href="#">Akhil</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<!-- About Me -->
-<div class="container px-5">
-    <div class="row gx-5 align-items-center">
-        <div class="col-lg-6 order-lg-2">
-            <div class="p-5"><img class="img-fluid rounded-circle" src="../static/img/me.jpg" alt="..."></div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-                <h2 class="display-4">About Me</h2>
-                <p>Hi everyone, I'm Akhil Satya Sai Cherukuri, a Sophomore Computer Science student
-                    at the University of Texas at Arlington. I've been interested in programming 
-                    since I was in 10th grade, and I've been teaching myself how to code ever 
-                    since.
-                </p>
-                <p><a href="./about">more</a></p>
-            </div>
-        </div>
-    </div>
-</div>
+  <div class="collapse navbar-collapse" id="navMenu">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="./about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="./contact">Contact</a></li>
+      <li class="nav-item">
+        <span class="nav-link toggle-theme"><i class="fas fa-moon"></i></span>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<!-- Herores -->
-<div class="text-center mb-5">
-    <b><h1 class="display-5 fw-bolder mb-0"><span class="text-primary">My Projects</span></h1></b>
-</div>
+<!-- About Me Section with Gradient Background -->
+<section class="py-5 text-black" style="background: linear-gradient(135deg, #f8f9fa, #e3f2fd);">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+        <img src="../static/img/me.jpg" alt="Akhil photo" class="img-fluid rounded-circle shadow-lg">
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <h2 class="display-5 fw-bold">About Me</h2>
+        <p class="lead">
+          I'm Akhil Satya Sai Cherukuri, a sophomore studying Computer Science at the University of Texas at Arlington.
+          I've been passionate about programming since 10th grade and have been self-learning ever since.
+        </p>
+        <a href="./about" class="btn btn-light btn-lg mt-3">More About Me</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Grid Layout for Projects -->
-<!-- first four projects in grid layout -->
-<div class="container">
-    <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
-            <a class="card lift h-100" href="./8_html_website">
-                <img class="card-img-top" src="../static/img/stock_market (1).jpg" alt="...">
-                <div class="card-body p-3">
-                    <div class="card-title small mb-0">Stock News</div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
-            <a class="card lift h-100" href="./7_selenium_webdriver">
-                <img class="card-img-top" src="../static/img/selenium_webdriver.gif" alt="...">
-                <div class="card-body p-3">
-                    <div class="card-title small mb-0">Selenium Web Driver</div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
-            <a class="card lift h-100" href="./6_web_scraping">
-                <img class="card-img-top" src="../static/img/web-scraping.png" alt="...">
-                <div class="card-body p-3">
-                    <div class="card-title small mb-0">Web Scraping</div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
-            <a class="card lift h-100" href="./5_quizzez">
-                <img class="card-img-top" src="../static/img/quizzez (1).png" alt="...">
-                <div class="card-body p-3">
-                    <div class="card-title small mb-0">Quizzez</div>
-                </div>
-            </a>
-        </div>
+
+<!-- Projects Grid -->
+<section class="container py-5">
+  <h2 class="text-center mb-5" data-aos="fade-up">My Projects</h2>
+
+  <!-- Project 1 -->
+  <div class="row mb-4 align-items-center" data-aos="fade-right">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/stock_market (1).jpg" class="img-fluid" alt="Stock News">
     </div>
-</div>
-<!-- second four cards in grid layout -->
-<div class="container">
-    <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
-            <a class="card lift h-100" href="./4_weather_forecast">
-                <img class="card-img-top" src="../static/img/rain_alert.webp" alt="...">
-                <div class="card-body p-3">
-                    <div class="card-title small mb-0">Weather Forecast</div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
-            <a class="card lift h-100" href="./3_flash_cards">
-                <img class="card-img-top" src="../static/img/Flash_Cards.jpg" alt="...">
-                <div class="card-body p-3">
-                    <div class="card-title small mb-0">Flash Cards</div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
-            <a class="card lift h-100" href="./2_pong_game">
-                <img class="card-img-top" src="../static/img/PONG-game.png" alt="...">
-                <div class="card-body p-3">
-                    <div class="card-title small mb-0">Pong Game</div>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-5">
-            <a class="card lift h-100" href="./1_snake_game">
-                <img class="card-img-top" src="../static/img/snake_game (1).webp" alt="...">
-                <div class="card-body p-3">
-                    <div class="card-title small mb-0">Snake Game</div>
-                </div>
-            </a>
-        </div>
+    <div class="col-md-10">
+      <h5><a href="./8_html_website" class="text-decoration-none">Stock News</a></h5>
+      <p class="mb-0">A web project that delivers up-to-date stock market news using APIs. Built using HTML, CSS, and JavaScript.</p>
     </div>
-</div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="row mb-4 align-items-center" data-aos="fade-left">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/selenium_webdriver.gif" class="img-fluid" alt="Selenium">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./7_selenium_webdriver" class="text-decoration-none">Selenium Web Driver</a></h5>
+      <p class="mb-0">Automated web interactions and scraping using Selenium with Python for browser-based tasks.</p>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="row mb-4 align-items-center" data-aos="fade-right">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/web-scraping.png" class="img-fluid" alt="Web Scraping">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./6_web_scraping" class="text-decoration-none">Web Scraping</a></h5>
+      <p class="mb-0">Extracted data from multiple websites for analysis and visualization. Used Python’s BeautifulSoup and Requests.</p>
+    </div>
+  </div>
+
+  <!-- Project 4 -->
+  <div class="row mb-4 align-items-center" data-aos="fade-left">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/quizzez (1).png" class="img-fluid" alt="Quizzez">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./5_quizzez" class="text-decoration-none">Quizzez</a></h5>
+      <p class="mb-0">A quiz application where users can test their knowledge in various subjects. Built with Python and Tkinter.</p>
+    </div>
+  </div>
+
+  <!-- Repeat for other projects... -->
+</section>
+
 
 <!-- Footer -->
-<div class="container">
-    <footer class="py-3 my-4">
-        <ul class="nav justify-content-center">
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>-->
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>-->
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>-->
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>-->
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>-->
-        </ul>
-        <p class="text-center text-body-secondary">© Akhil</p>
-    </footer>
-</div>
+<footer class="text-center py-4">
+  <p>© Akhil - 2025</p>
+</footer>
 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  // Dark/Light mode toggle
+  const toggle = document.querySelector('.toggle-theme');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggle.innerHTML = document.body.classList.contains('dark-mode')
+      ? '<i class="fas fa-sun"></i>'
+      : '<i class="fas fa-moon"></i>';
+  });
+</script>
+
 </body>
-
-</html>      
+</html>
