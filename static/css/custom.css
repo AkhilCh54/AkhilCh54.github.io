@@ -1,0 +1,34 @@
+/* Theme Variables */
+body.light-mode {
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --nav-bg: #f8f9fa;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --nav-bg: #121212;
+}
+
+/* Apply background and text color */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar overrides */
+.navbar {
+  background-color: var(--nav-bg) !important;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: var(--text-color) !important;
+}
+
+/* About section */
+.about-section h2,
+.about-section p {
+  color: var(--text-color) !important;
+}
