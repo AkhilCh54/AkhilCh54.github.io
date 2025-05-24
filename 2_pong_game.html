@@ -6,46 +6,69 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <style>
-    .feature-icon {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0.75rem;
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 0.75rem;
+        }
 
-}
-    
-  </style>
+        .project-img {
+            display: block;
+            margin: 2rem auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        .modern-btn {
+            border-radius: 12px;
+            padding: 12px 28px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .modern-btn:hover {
+            background-color: #212529;
+            color: white;
+        }
+
+        .header-section {
+            background-color: white;
+            padding: 60px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .header-section h1 {
+            font-weight: 700;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+        }
+    </style>
 </head>
 <body style="background-color: white;">
 <!-- Navigation Bar -->
-    <div class="container" >
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4"></span>
-        </a>
-
-        <ul class="nav nav-pills">
-            <li class="nav-item"><a href="./" class="nav-link" aria-current="page" routerLinkActive='active'>Home</a></li>
-<!--            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>-->
-            <li class="nav-item"><a href="./about" class="nav-link" routerLinkActive='active'>About</a></li>  
-        </ul>
-        </header>
-    </div>
-
-<!-- Return Button  -->
-<div class="container d-grid gap-3 d-sm-flex justify-content-sm-end justify-content-xxl-end mb-3">
-    <!-- <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="resume.html">Resume</a> -->
-    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="./index">Back</a>
-</div>
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4 fw-bold">My Portfolio</span>
+      </a>
+      <ul class="nav">
+        <li class="nav-item"><a href="./" class="nav-link px-2 link-dark">Home</a></li>
+        <li class="nav-item"><a href="./about" class="nav-link px-2 link-dark">About</a></li>
+      </ul>
+    </header>
+  </div>
 
 <!-- Header -->
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
-    <div class="col-md-6 p-lg-5 mx-auto my-5">
-        <h1 class="display-3 fw-bold">Pong Game (OOP)</h1>
-            <!-- <span class="subheading">This is what I do.</span> -->
+<div class="position-relative header-section p-3 p-md-5 m-md-3 text-center">
+    <div class="p-lg-5 mx-auto my-5">
+        <h1 class="display-3 fw-bold">Pong Game</h1>
     </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
 
 <!-- Main Content -->
@@ -53,49 +76,37 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>The first ping pong game released in the US was Pong, which was released in November 1972. It was created by Allan Alcorn as a training exercise for Atari co-founder Nolan Bushnell, but Bushnell and Atari co-founder Ted Dabney were surprised by the quality of Alcorn's work and decided to manufacture the game. Pong was an instant success, and it is credited with helping to launch the video game industry.</p>
-                <p>I created a version of it using Python. Here are some of the snippets on how the game works.</p>
+                <p>The first commercially successful ping pong video game was *Pong*, released in November 1972. Created by Allan Alcorn as a training exercise for Atari, it unexpectedly impressed co-founders Nolan Bushnell and Ted Dabney, who decided to release it. *Pong* became an instant hit and played a key role in launching the video game industry.</p>
+                <p>I recreated a version of Pong using Python. Here's how the game works:</p>
                 <ul>
-                    <li>It's a game that can be played by 2 players simultaneously.</li>
-                    <li>This game is programmed with OOP. It contains four parts : main.py, ball.py, scoreboard.py, and paddle.py</li>
-                    <li>The main.py combines different code snippets and makes sure the game works properly.</li>
-                    <li>The paddle.py script creates two paddles on opposite sides of the screen. Each paddle is controlled by a different set of keys, such as the ('W','S') keys for the left paddle and the ('pgUp','pgDn') keys for the right paddle.</li>
-                    <li>The ball.py module creates ball at center of the map.</li>
-                    <li>The scoreboard.py counts the score.</li>
-                    <li>It's game of 10 points, whichever side scores 10 points first wins.</li>
+                    <li>It's a 2-player game that can be played simultaneously.</li>
+                    <li>Built using object-oriented programming (OOP) and structured into four main files: <code>main.py</code>, <code>ball.py</code>, <code>scoreboard.py</code>, and <code>paddle.py</code>.</li> 
+                    <li><code>main.py</code> integrates all components and controls the game flow.</li>
+                    <li><code>paddle.py</code> creates two paddles on opposite sides of the screen, controlled using the keys ('W', 'S') for the left paddle and ('PgUp', 'PgDn') for the right paddle.</li>
+                    <li><code>ball.py</code> manages the ball, which spawns at the center of the screen and bounces off paddles and walls.</li> <li><code>scoreboard.py</code> tracks and displays player scores.</li> <li>The first player to reach 10 points wins the game.</li> 
                 </ul>
-                <p> </p>
-                <!-- Row of Photos -->
-                <img src="../static/img/pong_game_1.png" width="450" height="300">
-                <p> </p>
-                <img src="../static/img/pong_game_2.png" width="450" height="300">
+
+                <img class="project-img" src="../static/img/pong_game_1.png" alt="Web scraping screenshot 2">
+                <img class="project-img" src="../static/img/pong_game_2.png" alt="Web scraping screenshot 1">
             </div>
-        </div>    
+        </div>
     </div>
 </main>
 
-<!-- Return Button -->
-<div class="container d-grid gap-3 d-sm-flex justify-content-sm-end justify-content-xxl-end mb-3">
-    <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="./index">Back</a>
-    <!-- <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Projects</a> -->
+<!-- Back Button -->
+<div class="container mb-5 text-end">
+  <a class="btn btn-outline-dark modern-btn" href="./">Back</a>
 </div>
 
 <!-- Footer -->
 <div class="container">
-    <footer class="py-3 my-4">
-        <ul class="nav justify-content-center">
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>-->
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>-->
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>-->
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>-->
-<!--      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>-->
-        </ul>
-        <p class="text-center text-body-secondary">© Akhil</p>
-    </footer>
+  <footer class="py-4 border-top text-center text-muted">
+      <p>© Akhil</p>
+  </footer>
 </div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
-
-</html>    
+</html>
