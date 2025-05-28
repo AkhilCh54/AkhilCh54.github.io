@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Akhil's Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: white;
+      font-family: 'Segoe UI', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 100px 0;
+      background: linear-gradient(120deg, #e0f7fa, #ffffff);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .rounded-circle {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+
+
+    .navbar {
+      background-color: #ffffff !important;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode .navbar {
+      background-color: #1f1f1f !important;
+    }
+
+    .dark-mode .nav-link,
+    .dark-mode .navbar-brand {
+      color: #f0f0f0 !important;
+    }
+
+    .toggle-theme {
+      cursor: pointer;
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      margin-top: 3rem;
+      padding-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg px-3 sticky-top" style="background-color: #ffffff;">
+  <a class="navbar-brand fw-bold" href="./">My Portfolio</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navMenu">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Projects Grid -->
+<section class="container py-5">
+  <h2 class="text-center mb-5" data-aos="fade-up">My Projects</h2>
+
+  <!-- Project 8 -->
+  <div class="row mb-4 align-items-center" data-aos="fade-right">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/stock_market (1).jpg" class="img-fluid" alt="Stock News">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./8_html_website" class="text-decoration-none">Stock News</a></h5>
+      <p class="mb-0">A web project that delivers up-to-date stock market news using APIs. Built using HTML, CSS, and JavaScript.</p>
+    </div>
+  </div>
+
+  <!-- Project 7 -->
+  <hr class="my-4" style="border-top: 2px dashed black;">
+  <div class="row mb-4 align-items-center" data-aos="fade-left">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/selenium_webdriver.gif" class="img-fluid" alt="Selenium">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./7_selenium_webdriver" class="text-decoration-none">Selenium Web Driver</a></h5>
+      <p class="mb-0">Automated web interactions and scraping using Selenium with Python for browser-based tasks.</p>
+    </div>
+  </div>
+
+  <!-- Project 6 -->
+  <hr class="my-4" style="border-top: 2px dashed black;">
+  <div class="row mb-4 align-items-center" data-aos="fade-right">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/web-scraping.png" class="img-fluid" alt="Web Scraping">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./6_web_scraping" class="text-decoration-none">Web Scraping</a></h5>
+      <p class="mb-0">Extracted data from multiple websites for analysis and visualization. Used Python’s BeautifulSoup and Requests.</p>
+    </div>
+  </div>
+
+  <!-- Project 5 -->
+  <hr class="my-4" style="border-top: 2px dashed black;">
+  <div class="row mb-4 align-items-center" data-aos="fade-left">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/quizzez (1).png" class="img-fluid" alt="Quizzez">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./5_quizzez" class="text-decoration-none">Quizzez</a></h5>
+      <p class="mb-0">A quiz application where users can test their knowledge in various subjects. Built with Python and Tkinter.</p>
+    </div>
+  </div>
+
+  <!-- Project 4 -->
+  <hr class="my-4" style="border-top: 2px dashed black;">
+  <div class="row mb-4 align-items-center" data-aos="fade-right">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/rain_alert.webp" class="img-fluid" alt="weather forecast">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./4_weather_forecast.html" class="text-decoration-none">Weather Forecast</a></h5>
+      <p class="mb-0">A Python-based app that fetches real-time weather data and emails users a daily forecast.</p>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <hr class="my-4" style="border-top: 2px dashed black;">
+  <div class="row mb-4 align-items-center" data-aos="fade-left">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/Flash_Cards.jpg" class="img-fluid" alt="flash cards">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./3_flash_cards.html" class="text-decoration-none">Flash Cards - Learn with a Flip</a></h5>
+      <p class="mb-0">A simple Python app that helps you memorize vocabulary through timed visual flash cards</p>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <hr class="my-4" style="border-top: 2px dashed black;">
+  <div class="row mb-4 align-items-center" data-aos="fade-right">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/PONG-game.png" class="img-fluid" alt="pong game">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./2_pong_game.html" class="text-decoration-none">Pong game - Classic Reimagined</a></h5>
+      <p class="mb-0">A Python-powered remake of the arcade classic, built with OOP and interactive controls.</p>
+    </div>
+  </div>
+
+  <!-- Project 1 -->
+  <hr class="my-4" style="border-top: 2px dashed black;">
+  <div class="row mb-4 align-items-center" data-aos="fade-left">
+    <div class="col-md-2 text-center">
+      <img src="../static/img/snake_game (1).webp" class="img-fluid" alt="snake game">
+    </div>
+    <div class="col-md-10">
+      <h5><a href="./1_snake_game.html" class="text-decoration-none">Dynamic Snake: An Object-Oriented Approach to Classic Game</a></h5>
+      <p class="mb-0">An interactive Snake game developed in Python using object-oriented programming principles and modular architecture.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<div class="container">
+    <footer class="py-4 border-top text-center text-muted">
+        <p>© Akhil</p>
+    </footer>
+</div>
+
+<!-- Custom CSS -->
+<link href=".css/custom.css" rel="stylesheet">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
