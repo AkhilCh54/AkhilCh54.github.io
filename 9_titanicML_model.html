@@ -57,10 +57,6 @@
 </head>
 <body>
 
-<div class="alert alert-primary sticky-top" role="alert">
-  Work in Progress!!!
-</div>
-
   <!-- Navigation -->
 <nav class="navbar navbar-expand-lg px-3 sticky-top" style="background-color: #ffffff;">
   <a class="navbar-brand fw-bold" href="./">My Portfolio</a>
@@ -90,22 +86,28 @@
     <div class="row justify-content-center">
       <div class="col-lg-9 project-content">
         <p>
-          A stock market, equity market, or share market is a public entity for the trading of company stock and derivatives. Stock exchanges provide facilities for stockbrokers to trade stocks and other securities.
+          This project builds a machine learning model to predict which passengers survived the sinking of the RMS Titanic, using real-world passenger data from the Kaggle Titanic Competition. It explores how features like age, gender, class, and fare affected survival outcomes, and applies data preprocessing, feature engineering, and classification models to generate predictions on unseen data.
         </p>
         <p>
-          I created an application of it using Python. Here are some highlights of the project:
+          The notebook walks through the entire ML pipeline—from data exploration and cleaning to model evaluation—using Python and libraries like pandas, numpy and scikit-learn.
         </p>
         <ul>
-          <li>This website presents the latest news about the stock market.</li>
-          <li>It also provides updates about companies like Nokia, Tesla, Intel, Google, and Amazon.</li>
-          <li>
-            This project was built using:
-            <span class="underline-tech">Python, HTML, JS, CSS, Flask, Jinja, NEWS API, and OOP</span>.
-          </li>
-          <li>
-            Live demo: <a href="https://example-website-yfcp.onrender.com/" target="_blank">Visit Project Website</a>
-          </li>
+            <li><a href="https://github.com/AkhilCh54/TitanicDisaster_SurvivorPredictiveModel" target="_blank">Github Repo</a></li>
+            <li><a href="https://www.kaggle.com/competitions/titanic/overview" target="_blank">Kaggle Competition Page</a></li>
         </ul>
+        <h3>🔍 Key Findings & Insights</h3>
+        <ul>
+            <li>Accuracy Achieved: The final model achieved an accuracy of 83% on validation data, indicating strong predictive performance given the simplicity of the dataset.</li>
+            <li>Most Influential Features:</li>
+            <ol>
+                <li>Sex: Female passengers had a significantly higher survival rate.</li>
+                <li>Pclass: Passengers in 1st class were far more likely to survive than those in 2nd or 3rd class.</li>
+                <li>Family Size & IsAlone: Passengers traveling alone had lower survival rates, highlighting the impact of group travel on survival chances.</li>
+                <li>Fare & Embarked: Higher fares and certain embarkation ports correlated with better survival odds, possibly due to socio-economic factors.</li>
+            </ol>
+            <li>Feature Engineering Impact: Adding derived features like FamilySize, IsAlone, and Title significantly boosted model performance over raw data alone.</li>
+        </ul>
+        <p>This project helps build intuition around issues of bias and fairness, as it reveals how factors like gender, class, and socio-economic status influenced life-or-death outcomes. Additionally, it serves as a practical introduction to the end-to-end data science workflow, making it an excellent project for learning, portfolios, or interview preparation.</p>
       </div>
     </div>
   </main>
