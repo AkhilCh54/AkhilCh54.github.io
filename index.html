@@ -111,25 +111,45 @@
   </div>
 </nav>
 
-
-<!-- About Me Section with Gradient Background -->
+<!-- About Me Section with Expandable Content -->
 <section class="py-5 about-section">
   <div class="container">
     <div class="row align-items-center">
+      <!-- Profile Image -->
       <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
         <img src="../static/img/me.jpg" alt="Akhil photo" class="img-fluid rounded-circle shadow-lg">
       </div>
+
+      <!-- About Text -->
       <div class="col-md-6" data-aos="fade-left">
-        <h2 class="display-5 fw-bold">About Me</h2>
-        <p class="mb-0">
+        <h2 class="display-5 fw-bold mb-3">About Me</h2>
+        <p class="mb-3">
           I'm Akhil Satya Sai Cherukuri, a junior studying Computer Science at the University of Texas at Arlington.
           I've been passionate about programming since 10th grade and have been self-learning ever since.
         </p>
-        <a href="./about" class="btn btn-light btn-lg mt-3">More About Me</a>
+
+        <!-- Collapsible Content -->
+        <div class="collapse" id="moreAboutMe">
+          <div class="card card-body shadow-sm border-0">
+            <p class="mb-2">
+              In addition to my academic journey, I actively work on computational research in bioinformatics, develop Python and SQL solutions, and participate in open-source projects. I enjoy exploring machine learning, building side projects, and contributing to innovative solutions.
+            </p>
+            <p class="mb-0">
+              Outside of coding, I’m deeply interested in mentoring others and staying up to date with the latest in tech and science. My goal is to bridge my technical skills with impactful real-world applications.
+            </p>
+          </div>
+        </div>
+
+        <!-- More About Me Button -->
+        <button id="toggleButton" class="btn btn-light btn-lg mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#moreAboutMe" aria-expanded="false" aria-controls="moreAboutMe">
+          Read More
+        </button>
       </div>
     </div>
   </div>
 </section>
+
+
 
 <!-- Education section -->
 <section class="container py-5" id="Education">
@@ -187,20 +207,22 @@
 <!-- Simple badges -->
 <div class="container py-4">
   <h3 class="section-title text-left">Skills</h3>
+  <!-- first set starts -->
   <span class="badge bg-primary m-1">Python</span>
   <span class="badge bg-success m-1">Machine Learning</span>
   <span class="badge bg-info text-dark m-1">HTML</span>
   <span class="badge bg-warning text-dark m-1">CSS</span>
   <span class="badge bg-danger m-1">JavaScript</span>
   <span class="badge text-bg-secondary">C</span>
-  <span class="badge text-bg-light">Power BI</span>
+  <span class="badge text-bg-light">Tableau</span>
   <span class="badge text-bg-dark">SQL</span>
-
+  <!-- second set starts -->
   <span class="badge bg-primary m-1">Flask</span>
   <span class="badge bg-success m-1">Microsoft 365</span>
   <span class="badge bg-info text-dark m-1">NLP</span>
   <span class="badge bg-warning text-dark m-1">Technical Writing</span>
   <span class="badge bg-danger m-1">Object Oriented Paradigm</span>
+
 </div>
 
 <!-- Projects Grid --> <!-- Only show the 4 most recent projects -->
@@ -258,6 +280,19 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+<!-- More about me button js script -->
+<script>
+  const toggleButton = document.getElementById('toggleButton');
+  const moreAboutMe = document.getElementById('moreAboutMe');
+
+  moreAboutMe.addEventListener('shown.bs.collapse', () => {
+    toggleButton.textContent = 'Less';
+  });
+
+  moreAboutMe.addEventListener('hidden.bs.collapse', () => {
+    toggleButton.textContent = 'Read More';
+  });
 </script>
 
 </body>
