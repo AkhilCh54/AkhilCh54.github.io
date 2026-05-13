@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Akhil's Projects</title>
+  <title>Akhil's Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
@@ -11,6 +11,8 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link href="./static/css/custom.css" rel="stylesheet">
 
   <style>
     body {
@@ -23,39 +25,23 @@
       font-weight: bold;
     }
 
-    .hero {
-      padding: 100px 0;
-      background: linear-gradient(120deg, #e0f7fa, #ffffff);
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 20px;
-    }
-
     .card:hover {
       transform: scale(1.03);
       transition: transform 0.3s ease;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .rounded-circle {
+    .profile-img {
       width: 100%;
       max-width: 300px;
+      display: block;
+      margin: 0 auto;
     }
 
     .dark-mode {
       background-color: #121212;
       color: #f0f0f0;
     }
-
-
 
     .navbar {
       background-color: #ffffff !important;
@@ -92,6 +78,12 @@
       max-height: 120px;
       width: auto;
     }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -102,178 +94,162 @@
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navMenu">
     <ul class="navbar-nav ms-auto">
       <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="./projects.html" target="_blank">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- About Me Section with Expandable Content -->
-<section class="py-5 about-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Profile Image -->
-      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-        <img src="../static/img/me.jpg" alt="Akhil photo" class="img-fluid rounded-circle shadow-lg">
-      </div>
-
-      <!-- About Text -->
-      <div class="col-md-6" data-aos="fade-left">
-        <h2 class="display-5 fw-bold mb-3">About Me</h2>
-        <p class="mb-3">
-          I'm Akhil Satya Sai Cherukuri, a junior studying Computer Science at the University of Texas at Arlington.
-          I've been passionate about programming since 10th grade and have been self-learning ever since.
-        </p>
-
-        <!-- Collapsible Content -->
-        <div class="collapse" id="moreAboutMe">
-          <div class="card card-body shadow-sm border-0">
-            <p class="mb-2">
-              In addition to my academic journey, I actively work on computational research in bioinformatics, develop Python and SQL solutions, and participate in open-source projects. I enjoy exploring machine learning, building side projects, and contributing to innovative solutions.
-            </p>
-            <p class="mb-0">
-              Outside of coding, I’m deeply interested in mentoring others and staying up to date with the latest in tech and science. My goal is to bridge my technical skills with impactful real-world applications.
-            </p>
-          </div>
+<!-- About Me -->
+<section class="container py-5 about-section">
+  <div class="row align-items-center">
+    <div class="col-md-5 mb-4 mb-md-0 text-center" data-aos="fade-right">
+      <img src="./static/img/me.jpg" alt="Akhil photo" class="profile-img img-fluid rounded-circle shadow-lg">
+    </div>
+    <div class="col-md-7" data-aos="fade-left">
+      <h2 class="display-5 fw-bold mb-3">About Me</h2>
+      <p class="mb-3">
+        I'm Akhil Satya Sai Cherukuri, a junior studying Computer Science at the University of Texas at Arlington.
+        I've been passionate about programming since 10th grade and have been self-learning ever since.
+      </p>
+      <div class="collapse" id="moreAboutMe">
+        <div class="card card-body shadow-sm border-0 mb-3">
+          <p class="mb-2">
+            In addition to my academic journey, I actively work on computational research in bioinformatics, develop Python and SQL solutions, and participate in open-source projects. I enjoy exploring machine learning, building side projects, and contributing to innovative solutions.
+          </p>
+          <p class="mb-0">
+            Outside of coding, I'm deeply interested in mentoring others and staying up to date with the latest in tech and science. My goal is to bridge my technical skills with impactful real-world applications.
+          </p>
         </div>
-
-        <!-- More About Me Button -->
-        <button id="toggleButton" class="btn btn-light btn-lg mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#moreAboutMe" aria-expanded="false" aria-controls="moreAboutMe">
-          Read More
-        </button>
       </div>
+      <button id="toggleButton" class="btn btn-light btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#moreAboutMe" aria-expanded="false" aria-controls="moreAboutMe">
+        Read More
+      </button>
     </div>
   </div>
 </section>
 
+<hr class="section-divider">
 
-
-<!-- Education section -->
+<!-- Education -->
 <section class="container py-5" id="Education">
-  <h2 class="section-title text-left">Education</h2>
-
-  <!-- First education item -->
-  <div class="row mb-4 align-items-center">
-    <div class="col-md-2 text-center">
-      <img src="../static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
+  <h2 class="section-title mb-4">Education</h2>
+  <div class="row align-items-center">
+    <div class="col-md-2 text-center mb-3 mb-md-0">
+      <img src="./static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
     </div>
     <div class="col-md-10">
-      <h5 class="text-decoration-none">University of Texas at Arlington</h5>
+      <h5>University of Texas at Arlington</h5>
       <p class="mb-0">
         B.S. in Computer Science, College of Engineering<br>
         Minor in Data Science – bridging the principles of CSE with AI and machine learning.<br>
-        Recognized for academic excellence by earning a place on the Dean’s List for 2024<br>
+        Recognized for academic excellence by earning a place on the Dean's List for 2024<br>
         GPA: 4.0
       </p>
     </div>
   </div>
 </section>
 
+<hr class="section-divider">
+
 <!-- Work Experience -->
 <section class="container py-5" id="Work_experience">
-  <h2 class="section-title mb-4">WORK EXPERIENCE</h2>
-
-  <div class="row mb-4 align-items-center">
-    <div class="col-md-2 text-center">
-      <img src="../static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
+  <h2 class="section-title mb-4">Work Experience</h2>
+  <div class="row align-items-start">
+    <div class="col-md-2 text-center mb-3 mb-md-0">
+      <img src="./static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
     </div>
     <div class="col-md-10">
-      <h5 class="text-decoration-none" style="margin-bottom: 0.25rem;">Computational Research Assistant</h5>
-      <p class="text-muted mb-1" style="font-size: 0.95rem; margin-bottom: 0.2rem;">Dr. Matthew Fujita Lab, Department of Biology, UTA</p>
-      <p class="text-muted mb-2" style="font-size: 0.9rem; margin-bottom: 0.4rem;">June 2025 – Present</p>
-      <ul class="list-unstyled" style="margin-bottom: 0; padding-left: 1.2rem;">
-        <li style="margin-bottom: 0.3rem; line-height: 1.4;">
-          Develop Python scripts to optimize data processing workflows and automate analysis pipelines for genomics research.
-        </li>
-        <li style="margin-bottom: 0.3rem; line-height: 1.4;">
-          Design and query SQL databases to manage large-scale biological datasets and ensure data integrity.
-        </li>
-        <li style="margin-bottom: 0.3rem; line-height: 1.4;">
-          Collaborate with PhD student on bioinformatics methods, learning domain-specific techniques to support computational research.
-        </li>
-        <li style="line-height: 1.4;">
-          Contribute to visualization and reporting of results for publications and presentations.
-        </li>
+      <h5 class="mb-1">Computational Research Assistant</h5>
+      <p class="text-muted mb-1" style="font-size: 0.95rem;">Dr. Matthew Fujita Lab, Department of Biology, UTA</p>
+      <p class="text-muted mb-3" style="font-size: 0.9rem;">June 2025 – Present</p>
+      <ul class="list-unstyled ps-3">
+        <li class="mb-2">Develop Python scripts to optimize data processing workflows and automate analysis pipelines for genomics research.</li>
+        <li class="mb-2">Design and query SQL databases to manage large-scale biological datasets and ensure data integrity.</li>
+        <li class="mb-2">Collaborate with PhD student on bioinformatics methods, learning domain-specific techniques to support computational research.</li>
+        <li>Contribute to visualization and reporting of results for publications and presentations.</li>
       </ul>
     </div>
   </div>
 </section>
 
+<hr class="section-divider">
 
-
-<!-- Simple badges -->
-<div class="container py-4">
-  <h3 class="section-title text-left">Skills</h3>
-  <!-- first set starts -->
-  <span class="badge bg-primary m-1">Python</span>
-  <span class="badge bg-success m-1">Machine Learning</span>
-  <span class="badge bg-info text-dark m-1">HTML</span>
-  <span class="badge bg-warning text-dark m-1">CSS</span>
-  <span class="badge bg-danger m-1">JavaScript</span>
-  <span class="badge text-bg-secondary">C</span>
-  <span class="badge text-bg-light">Tableau</span>
-  <span class="badge text-bg-dark">SQL</span>
-  <!-- second set starts -->
-  <span class="badge bg-primary m-1">Flask</span>
-  <span class="badge bg-success m-1">Microsoft 365</span>
-  <span class="badge bg-info text-dark m-1">NLP</span>
-  <span class="badge bg-warning text-dark m-1">Technical Writing</span>
-  <span class="badge bg-danger m-1">Object Oriented Paradigm</span>
-
-</div>
-
-<!-- Projects Grid --> <!-- Only show the 4 most recent projects -->
-<section class="container py-5" id="recent-projects">
-  <h2 class="section-title text-left">Recent Projects</h2>
-  <div class="row">
-    <!-- Project -->
-    <div class="col-md-6 mb-4">
-      <div class="card p-3">
-        <h5><a href="./9_titanicML_model.html" target="_blank" class="text-decoration-none">Predicting Titanic Passengers' Survival Using Machine Learning</a></h5>
-        <p>Built a predictive model using feature engineering and ensemble learning to determine which passengers survived the Titanic disaster.</p>
-      </div>
-    </div>
-    <!-- Project -->
-    <div class="col-md-6 mb-4">
-      <div class="card p-3">
-        <h5><a href="./8_html_website" target="_blank" class="text-decoration-none">Predicting House Prices in Ames, Iowa Using Machine Learning</a></h5>
-        <p>Developed a regression model leveraging 79 features to accurately predict house sale prices in Ames, Iowa, as part of Kaggle's Housing Prices Competition.</p>
-      </div>
-    </div>
-    <!-- Project -->
-    <div class="col-md-6 mb-4">
-      <div class="card p-3">
-        <h5><a href="./8_html_website" target="_blank" class="text-decoration-none">Stock News Website</a></h5>
-        <p>Delivers stock market news using APIs. Built with HTML, CSS, and JavaScript.</p>
-      </div>
-    </div>
-    <!-- Project -->
-    <div class="col-md-6 mb-4">
-      <div class="card p-3">
-        <h5><a href="./7_selenium_webdriver" target="_blank" class="text-decoration-none">Selenium Web Driver</a></h5>
-        <p>Automates browser tasks using Python and Selenium.</p>
-      </div>
-    </div>
-    
-  <!-- all projects button -->
-  <div class="text-left">
-    <a href="./projects.html" target="_blank" class="btn btn-outline-dark">View All Projects</a>
+<!-- Skills -->
+<section class="container py-5">
+  <h2 class="section-title mb-4">Skills</h2>
+  <div>
+    <span class="badge bg-primary m-1">Python</span>
+    <span class="badge bg-success m-1">Machine Learning</span>
+    <span class="badge bg-info text-dark m-1">HTML</span>
+    <span class="badge bg-warning text-dark m-1">CSS</span>
+    <span class="badge bg-danger m-1">JavaScript</span>
+    <span class="badge text-bg-secondary m-1">C</span>
+    <span class="badge text-bg-light m-1">Tableau</span>
+    <span class="badge text-bg-dark m-1">SQL</span>
+    <span class="badge bg-primary m-1">Flask</span>
+    <span class="badge bg-success m-1">Microsoft 365</span>
+    <span class="badge bg-info text-dark m-1">NLP</span>
+    <span class="badge bg-warning text-dark m-1">Technical Writing</span>
+    <span class="badge bg-danger m-1">Object Oriented Paradigm</span>
   </div>
 </section>
 
+<hr class="section-divider">
+
+<!-- Recent Projects -->
+<section class="container py-5" id="recent-projects">
+  <h2 class="section-title mb-4">Recent Projects</h2>
+  <div class="row">
+
+    <!-- Project 9 -->
+    <div class="col-md-6 mb-4">
+      <div class="card p-3 h-100">
+        <h5><a href="./9_titanicML_model.html" class="text-decoration-none">Predicting Titanic Passengers' Survival Using Machine Learning</a></h5>
+        <p class="mb-0">Built a classification model using feature engineering and ensemble learning to predict which passengers survived the Titanic disaster. Achieved 83% accuracy on validation data.</p>
+      </div>
+    </div>
+
+    <!-- Project 8 -->
+    <div class="col-md-6 mb-4">
+      <div class="card p-3 h-100">
+        <h5><a href="./8_html_website.html" class="text-decoration-none">Stock News Website</a></h5>
+        <p class="mb-0">A web app that delivers live stock market news using a financial news API. Built with Python, Flask, HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+
+    <!-- Project 7 -->
+    <div class="col-md-6 mb-4">
+      <div class="card p-3 h-100">
+        <h5><a href="./7_selenium_webdriver.html" class="text-decoration-none">Selenium WebDriver – Zillow Rental Scraper</a></h5>
+        <p class="mb-0">Automates scraping rental listings from Zillow and populates a Google Spreadsheet via Google Forms using Python and Selenium.</p>
+      </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="col-md-6 mb-4">
+      <div class="card p-3 h-100">
+        <h5><a href="./6_web_scraping.html" class="text-decoration-none">Web Scraping – Billboard to Spotify Playlist</a></h5>
+        <p class="mb-0">Scrapes the Billboard Hot 100 for a user-specified date using BeautifulSoup and automatically creates a matching Spotify playlist.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mt-2">
+    <a href="./projects.html" class="btn btn-outline-dark">View All Projects</a>
+  </div>
+</section>
 
 <!-- Footer -->
-<div class="container">
-    <footer class="py-4 border-top text-center text-muted">
-        <p>© Akhil</p>
-    </footer>
-</div>
+<footer class="container">
+  <div class="py-4 border-top text-center text-muted">
+    <p>© Akhil</p>
+  </div>
+</footer>
 
-<!-- Custom CSS -->
-<link href=".css/custom.css" rel="stylesheet">
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- AOS -->
@@ -281,7 +257,7 @@
 <script>
   AOS.init();
 </script>
-<!-- More about me button js script -->
+<!-- Read More toggle -->
 <script>
   const toggleButton = document.getElementById('toggleButton');
   const moreAboutMe = document.getElementById('moreAboutMe');
