@@ -63,7 +63,7 @@
       border-radius: 12px;
       padding: 1.25rem;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
-      cursor: default;
+      cursor: pointer;
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -441,6 +441,13 @@
     expand.classList.toggle('open', !isOpen);
     btn.textContent = isOpen ? 'More ↓' : 'Less ↑';
   }
+
+  document.querySelectorAll('.project-card').forEach((card) => {
+    card.addEventListener('click', (event) => {
+      if (event.target.closest('a, button')) return;
+      toggleExpand(card.querySelector('.more-btn'));
+    });
+  });
 </script>
 
 </body>
