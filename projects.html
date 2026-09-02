@@ -161,6 +161,35 @@
       font-weight: 600;
       letter-spacing: 0.05em;
     }
+
+    .project-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: #777;
+    }
+
+    .project-status {
+      border-radius: 20px;
+      padding: 2px 9px;
+      font-weight: 600;
+    }
+
+    .status-completed {
+      background-color: #e7f6ec;
+      color: #237a3b;
+    }
+
+    .status-active {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    .dark-mode .project-meta {
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -173,7 +202,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navMenu">
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="./" target="_blank">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
       <li class="nav-item"><a class="nav-link active" href="./projects.html">Projects</a></li>
     </ul>
   </div>
@@ -189,6 +218,7 @@
     <div class="col-md-6" data-aos="fade-up">
       <div class="project-card">
         <span class="project-number">PROJECT 10</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">What Makes a Movie a Blockbuster?</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Classifies movies as blockbusters by financial and popularity metrics using multiple ML models.</p>
         <div class="card-footer-row">
@@ -213,6 +243,7 @@
     <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
       <div class="project-card">
         <span class="project-number">PROJECT 09</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Predicting Titanic Passengers' Survival Using Machine Learning</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Built a predictive model using feature engineering and ensemble learning.</p>
         <div class="card-footer-row">
@@ -237,6 +268,7 @@
     <div class="col-md-6" data-aos="fade-up">
       <div class="project-card">
         <span class="project-number">PROJECT 08</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Stock News</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">A web project delivering up-to-date stock market news using APIs.</p>
         <div class="card-footer-row">
@@ -261,6 +293,7 @@
     <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
       <div class="project-card">
         <span class="project-number">PROJECT 07</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Selenium WebDriver – Zillow Rental Scraper</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Automates scraping Zillow listings and populates a Google Spreadsheet via Google Forms.</p>
         <div class="card-footer-row">
@@ -284,6 +317,7 @@
     <div class="col-md-6" data-aos="fade-up">
       <div class="project-card">
         <span class="project-number">PROJECT 06</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Web Scraping – Spotify Time Machine</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Scrapes Billboard Hot 100 and creates a Spotify playlist for any date.</p>
         <div class="card-footer-row">
@@ -307,6 +341,7 @@
     <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
       <div class="project-card">
         <span class="project-number">PROJECT 05</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Quizzez</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">A quiz application where users can test their knowledge in various subjects.</p>
         <div class="card-footer-row">
@@ -330,6 +365,7 @@
     <div class="col-md-6" data-aos="fade-up">
       <div class="project-card">
         <span class="project-number">PROJECT 04</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Weather Forecast</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Fetches real-time weather data and emails users a daily forecast.</p>
         <div class="card-footer-row">
@@ -353,6 +389,7 @@
     <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
       <div class="project-card">
         <span class="project-number">PROJECT 03</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Flash Cards – Learn with a Flip</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Helps you memorize vocabulary through timed visual flash cards.</p>
         <div class="card-footer-row">
@@ -376,6 +413,7 @@
     <div class="col-md-6" data-aos="fade-up">
       <div class="project-card">
         <span class="project-number">PROJECT 02</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Pong Game – Classic Reimagined</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">A Python-powered remake of the arcade classic with OOP and interactive controls.</p>
         <div class="card-footer-row">
@@ -399,6 +437,7 @@
     <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
       <div class="project-card">
         <span class="project-number">PROJECT 01</span>
+        <div class="project-meta"><span>Date: Add date</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Dynamic Snake: An Object-Oriented Approach</h5>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">An interactive Snake game using OOP principles and modular architecture.</p>
         <div class="card-footer-row">
