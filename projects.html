@@ -171,7 +171,7 @@
 
     .project-date {
       margin-bottom: 0.5rem;
-      font-size: 0.75rem;
+      font-size: 0.95rem;
       color: #777;
     }
 
@@ -219,12 +219,108 @@
 
   <div class="row g-4">
 
+    <!-- Project 13 -->
+    <div class="col-md-6" data-aos="fade-up">
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-number">Project 13</span>
+          <span class="project-status status-active">Ongoing</span>
+        </div>
+
+        <h5 class="mt-2 mb-1">
+          Building High-Confidence Copia Transposable Element Reference Library in the Aspidoscelis tesselatus
+        </h5>
+
+        <div class="project-date">May 2026</div>
+
+        <p class="mb-0 text-muted" style="font-size:0.9rem;">
+          Builds a manually curated LTR/Copia reference library by identifying genomic copies,
+          refining sequence alignments, defining element boundaries, and generating representative
+          consensus sequences.
+        </p>
+
+        <div class="card-footer-row">
+          <div>
+            <span class="tag">Bioinformatics</span>
+            <span class="tag">Transposable Elements</span>
+            <span class="tag">LTR/Copia</span>
+            <span class="tag">Sequence Analysis</span>
+          </div>
+
+          <button class="more-btn" onclick="toggleExpand(this)">More ↓</button>
+        </div>
+
+        <div class="card-expand">
+          <p>
+            This project focuses on developing a high-confidence reference library for LTR/Copia
+            transposable elements from the marmoratus–maternal subgenome of
+            <em>Aspidoscelis tesselatus</em>. Candidate families identified by RepeatModeler2 are
+            manually curated by recovering homologous genomic copies with BLAST, generating
+            multiple sequence alignments with MAFFT and T-Coffee, and inspecting alignments to
+            remove poorly supported regions, refine element boundaries, and distinguish related
+            sequence groups. Final representative consensus sequences are evaluated using
+            structural analyses including TE-Aid and self-dotplots, and profile HMMs are generated
+            from curated alignments. The resulting reference library provides high-quality TE
+            sequences for genome annotation and can serve as a benchmark for evaluating automated
+            and AI-assisted transposable-element identification pipelines.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 12 -->
+    <div class="col-md-6" data-aos="fade-up">
+      <div class="project-card">
+        <div class="project-header"><span class="project-number">PROJECT 12</span><span class="project-status status-active">Ongoing</span></div>
+        <h5 class="mt-2 mb-1">Exploring Uncharacterized Transposable Element Families Using Machine Learning</h5>
+        <div class="project-date">January 2026</div>
+        <p class="mb-0 text-muted" style="font-size:0.9rem;">Groups unclassified transposable elements into biologically meaningful clusters using sequence-derived features and unsupervised learning.</p>
+        <div class="card-footer-row">
+          <div>
+            <span class="tag">Python</span>
+            <span class="tag">Bioinformatics</span>
+            <span class="tag">UMAP</span>
+            <span class="tag">Spectral Clustering</span>
+          </div>
+          <button class="more-btn" onclick="toggleExpand(this)">More ↓</button>
+        </div>
+        <div class="card-expand">
+          <p>An ongoing bioinformatics project that characterizes unknown transposable element sequences from squamate reptile genomes. The pipeline extracts metadata, sequence composition, complexity, open reading frame, and k-mer features; standardizes the resulting feature matrix; creates a two-dimensional UMAP embedding; and applies spectral clustering to identify candidate TE families. The current best run produced three clusters with a silhouette score of 0.4005 and a Davies-Bouldin score of 0.7352, with UMAP scatter plots and feature-level box plots used to interpret the groups.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 11 -->
+    <div class="col-md-6" data-aos="fade-up">
+      <div class="project-card">
+        <div class="project-header"><span class="project-number">PROJECT 11</span><span class="project-status status-completed">Completed</span></div>
+        <h5 class="mt-2 mb-1">Housing Price Predictor Model</h5>
+        <div class="project-date">May 2026</div>
+        <p class="mb-0 text-muted" style="font-size:0.9rem;">Predicts home sale prices from the Ames Housing dataset using Random Forest regression.</p>
+        <div class="card-footer-row">
+          <div>
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">Pandas</span>
+          </div>
+          <button class="more-btn" onclick="toggleExpand(this)">More ↓</button>
+        </div>
+        <div class="card-expand">
+          <p>A machine learning regression project that estimates home sale prices using the Ames Housing dataset. The workflow cleans missing values, one-hot encodes categorical variables, removes less relevant and multicollinear features, and scales numeric features before training a Random Forest Regressor. The model achieved an R² score of 91.36% with an approximate RMSE of $26,657.</p>
+          <div class="mt-2 d-flex gap-2">
+            <a href="https://github.com/AkhilCh54/HousingPrice-Predictor-Model" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Project 10 -->
     <div class="col-md-6" data-aos="fade-up">
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 10</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">What Makes a Movie a Blockbuster?</h5>
-        <div class="project-date">Date: March 2026</div>
+        <div class="project-date">March 2026</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Classifies movies as blockbusters by financial and popularity metrics using multiple ML models.</p>
         <div class="card-footer-row">
           <div>
@@ -249,7 +345,7 @@
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 09</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Predicting Titanic Passengers' Survival Using Machine Learning</h5>
-        <div class="project-date">Date: October 2025</div>
+        <div class="project-date">October 2025</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Built a predictive model using feature engineering and ensemble learning.</p>
         <div class="card-footer-row">
           <div>
@@ -274,7 +370,7 @@
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 08</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Stock News</h5>
-        <div class="project-date">Date: October 2025</div>
+        <div class="project-date">October 2025</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">A web project delivering up-to-date stock market news using APIs.</p>
         <div class="card-footer-row">
           <div>
@@ -299,7 +395,7 @@
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 07</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Selenium WebDriver – Zillow Rental Scraper</h5>
-        <div class="project-date">Date: August 2025</div>
+        <div class="project-date">August 2025</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Automates scraping Zillow listings and populates a Google Spreadsheet via Google Forms.</p>
         <div class="card-footer-row">
           <div>
@@ -323,7 +419,7 @@
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 06</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Web Scraping – Spotify Time Machine</h5>
-        <div class="project-date">Date: June 2025</div>
+        <div class="project-date">June 2025</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Scrapes Billboard Hot 100 and creates a Spotify playlist for any date.</p>
         <div class="card-footer-row">
           <div>
@@ -347,7 +443,7 @@
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 05</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Quizzez</h5>
-        <div class="project-date">Date: April 2025</div>
+        <div class="project-date">April 2025</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">A quiz application where users can test their knowledge in various subjects.</p>
         <div class="card-footer-row">
           <div>
@@ -371,7 +467,7 @@
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 04</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Weather Forecast</h5>
-        <div class="project-date">Date: December 2024</div>
+        <div class="project-date">December 2024</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Fetches real-time weather data and emails users a daily forecast.</p>
         <div class="card-footer-row">
           <div>
@@ -395,7 +491,7 @@
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 03</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Flash Cards – Learn with a Flip</h5>
-        <div class="project-date">Date: December 2024</div>
+        <div class="project-date">December 2024</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">Helps you memorize vocabulary through timed visual flash cards.</p>
         <div class="card-footer-row">
           <div>
@@ -419,7 +515,7 @@
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 02</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Pong Game – Classic Reimagined</h5>
-        <div class="project-date">Date: August 2024</div>
+        <div class="project-date">August 2024</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">A Python-powered remake of the arcade classic with OOP and interactive controls.</p>
         <div class="card-footer-row">
           <div>
@@ -443,7 +539,7 @@
       <div class="project-card">
         <div class="project-header"><span class="project-number">PROJECT 01</span><span class="project-status status-completed">Completed</span></div>
         <h5 class="mt-2 mb-1">Dynamic Snake: An Object-Oriented Approach</h5>
-        <div class="project-date">Date: August 2024</div>
+        <div class="project-date">August 2024</div>
         <p class="mb-0 text-muted" style="font-size:0.9rem;">An interactive Snake game using OOP principles and modular architecture.</p>
         <div class="card-footer-row">
           <div>
