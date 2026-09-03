@@ -84,6 +84,24 @@
       border-top: 1px solid #e0e0e0;
       margin: 0;
     }
+
+    .project-status {
+      border-radius: 20px;
+      padding: 2px 8px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .status-completed {
+      background-color: #e7f6ec;
+      color: #237a3b;
+    }
+
+    .status-active {
+      background-color: #fff3cd;
+      color: #0d6efd;
+    }
   </style>
 </head>
 <body>
@@ -202,49 +220,43 @@
 <!-- Recent Projects -->
 <section class="container py-5" id="recent-projects">
   <h2 class="section-title mb-4">Recent Projects</h2>
-  <div class="row">
+  <div class="row" id="recent-projects-grid">
 
-    <!-- Project 9 -->
+    <!-- Static fallback; automatically refreshed from projects.html when hosted -->
     <div class="col-md-6 mb-4">
       <div class="card p-3 h-100">
-        <h5>Predicting Titanic Passengers' Survival Using Machine Learning</h5>
-        <p>Built a classification model using feature engineering and ensemble learning to predict which passengers survived the Titanic disaster. Achieved 83% accuracy on validation data.</p>
+        <div class="d-flex justify-content-between gap-2"><h5>Exploring Uncharacterized Transposable Element Families Using Machine Learning</h5><span class="project-status status-active">Ongoing</span></div>
+        <p>Groups unclassified transposable elements into biologically meaningful clusters using sequence-derived features and unsupervised learning.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card p-3 h-100">
+        <div class="d-flex justify-content-between gap-2"><h5>Housing Price Predictor Model</h5><span class="project-status status-completed">Completed</span></div>
+        <p>Predicts home sale prices from the Ames Housing dataset using Random Forest regression.</p>
+        <div class="mt-auto">
+          <a href="https://github.com/AkhilCh54/HousingPrice-Predictor-Model" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card p-3 h-100">
+        <div class="d-flex justify-content-between gap-2"><h5>What Makes a Movie a Blockbuster?</h5><span class="project-status status-completed">Completed</span></div>
+        <p>Classifies movies as blockbusters by financial and popularity metrics using multiple ML models.</p>
+        <div class="mt-auto">
+          <a href="https://github.com/AkhilCh54/movie-blockbuster-predictor" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card p-3 h-100">
+        <div class="d-flex justify-content-between gap-2"><h5>Predicting Titanic Passengers' Survival Using Machine Learning</h5><span class="project-status status-completed">Completed</span></div>
+        <p>Built a predictive model using feature engineering and ensemble learning.</p>
         <div class="mt-auto">
           <a href="https://github.com/AkhilCh54/TitanicDisaster_SurvivorPredictiveModel" target="_blank" class="btn btn-sm btn-outline-dark me-2">GitHub</a>
           <a href="https://www.kaggle.com/competitions/titanic/overview" target="_blank" class="btn btn-sm btn-outline-dark">Kaggle</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 8 -->
-    <div class="col-md-6 mb-4">
-      <div class="card p-3 h-100">
-        <h5>Stock News Website</h5>
-        <p>A web app that delivers live stock market news using a financial news API. Built with Python, Flask, HTML, CSS, and JavaScript.</p>
-        <div class="mt-auto">
-          <a href="https://github.com/AkhilCh54/Stock-Market-News-Hub" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 7 -->
-    <div class="col-md-6 mb-4">
-      <div class="card p-3 h-100">
-        <h5>Selenium WebDriver – Zillow Rental Scraper</h5>
-        <p>Automates scraping rental listings from Zillow and populates a Google Spreadsheet via Google Forms using Python and Selenium.</p>
-        <div class="mt-auto">
-          <a href="https://github.com/AkhilCh54/Zillow-Property-Automation" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 10 -->
-    <div class="col-md-6 mb-4">
-      <div class="card p-3 h-100">
-        <h5>What Makes a Movie a Blockbuster?</h5>
-        <p>A group data mining project that classifies movies as blockbusters by financial and popularity metrics using Decision Tree, Random Forest, Logistic Regression, and KNN models.</p>
-        <div class="mt-auto">
-          <a href="https://github.com/AkhilCh54/movie-blockbuster-predictor" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
         </div>
       </div>
     </div>
@@ -269,6 +281,73 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+<!-- Keep Recent Projects synchronized with the newest cards in projects.html -->
+<script>
+  async function syncRecentProjects() {
+    try {
+      const response = await fetch('./projects.html');
+      if (!response.ok) return;
+
+      const html = await response.text();
+      const source = new DOMParser().parseFromString(html, 'text/html');
+      const projectCards = [...source.querySelectorAll('.project-card')].slice(0, 4);
+      if (!projectCards.length) return;
+
+      const grid = document.getElementById('recent-projects-grid');
+      grid.replaceChildren(...projectCards.map((sourceCard) => {
+        const column = document.createElement('div');
+        column.className = 'col-md-6 mb-4';
+
+        const card = document.createElement('div');
+        card.className = 'card p-3 h-100';
+
+        const header = document.createElement('div');
+        header.className = 'd-flex justify-content-between gap-2';
+
+        const title = document.createElement('h5');
+        title.textContent = sourceCard.querySelector('h5')?.textContent.trim() || 'Project';
+        header.appendChild(title);
+
+        const sourceStatus = sourceCard.querySelector('.project-status');
+        if (sourceStatus) {
+          const status = document.createElement('span');
+          status.className = sourceStatus.className;
+          status.textContent = sourceStatus.textContent.trim();
+          header.appendChild(status);
+        }
+
+        card.appendChild(header);
+
+        const description = document.createElement('p');
+        description.textContent = sourceCard.querySelector(':scope > p')?.textContent.trim() || '';
+        card.appendChild(description);
+
+        const sourceLinks = sourceCard.querySelectorAll('.card-expand a');
+        if (sourceLinks.length) {
+          const links = document.createElement('div');
+          links.className = 'mt-auto';
+          sourceLinks.forEach((sourceLink, index) => {
+            const link = document.createElement('a');
+            link.href = sourceLink.href;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.className = `btn btn-sm btn-outline-dark${index < sourceLinks.length - 1 ? ' me-2' : ''}`;
+            link.textContent = sourceLink.textContent.trim();
+            links.appendChild(link);
+          });
+          card.appendChild(links);
+        }
+
+        column.appendChild(card);
+        return column;
+      }));
+    } catch (error) {
+      // The static fallback remains visible if projects.html cannot be fetched.
+    }
+  }
+
+  syncRecentProjects();
 </script>
 <!-- Read More toggle -->
 <script>
