@@ -85,23 +85,6 @@
       margin: 0;
     }
 
-    .project-status {
-      border-radius: 20px;
-      padding: 2px 8px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-
-    .status-completed {
-      background-color: #e7f6ec;
-      color: #237a3b;
-    }
-
-    .status-active {
-      background-color: #fff3cd;
-      color: #0d6efd;
-    }
   </style>
 </head>
 <body>
@@ -225,14 +208,14 @@
     <!-- Static fallback; automatically refreshed from projects.html when hosted -->
     <div class="col-md-6 mb-4">
       <div class="card p-3 h-100">
-        <div class="d-flex justify-content-between gap-2"><h5>Exploring Uncharacterized Transposable Element Families Using Machine Learning</h5><span class="project-status status-active">Ongoing</span></div>
+        <div class="d-flex justify-content-between gap-2"><h5>Exploring Uncharacterized Transposable Element Families Using Machine Learning</h5></div>
         <p>Groups unclassified transposable elements into biologically meaningful clusters using sequence-derived features and unsupervised learning.</p>
       </div>
     </div>
 
     <div class="col-md-6 mb-4">
       <div class="card p-3 h-100">
-        <div class="d-flex justify-content-between gap-2"><h5>Housing Price Predictor Model</h5><span class="project-status status-completed">Completed</span></div>
+        <div class="d-flex justify-content-between gap-2"><h5>Housing Price Predictor Model</h5></div>
         <p>Predicts home sale prices from the Ames Housing dataset using Random Forest regression.</p>
         <div class="mt-auto">
           <a href="https://github.com/AkhilCh54/HousingPrice-Predictor-Model" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
@@ -242,7 +225,7 @@
 
     <div class="col-md-6 mb-4">
       <div class="card p-3 h-100">
-        <div class="d-flex justify-content-between gap-2"><h5>What Makes a Movie a Blockbuster?</h5><span class="project-status status-completed">Completed</span></div>
+        <div class="d-flex justify-content-between gap-2"><h5>What Makes a Movie a Blockbuster?</h5></div>
         <p>Classifies movies as blockbusters by financial and popularity metrics using multiple ML models.</p>
         <div class="mt-auto">
           <a href="https://github.com/AkhilCh54/movie-blockbuster-predictor" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
@@ -252,7 +235,7 @@
 
     <div class="col-md-6 mb-4">
       <div class="card p-3 h-100">
-        <div class="d-flex justify-content-between gap-2"><h5>Predicting Titanic Passengers' Survival Using Machine Learning</h5><span class="project-status status-completed">Completed</span></div>
+        <div class="d-flex justify-content-between gap-2"><h5>Predicting Titanic Passengers' Survival Using Machine Learning</h5></div>
         <p>Built a predictive model using feature engineering and ensemble learning.</p>
         <div class="mt-auto">
           <a href="https://github.com/AkhilCh54/TitanicDisaster_SurvivorPredictiveModel" target="_blank" class="btn btn-sm btn-outline-dark me-2">GitHub</a>
@@ -302,22 +285,9 @@
         const card = document.createElement('div');
         card.className = 'card p-3 h-100';
 
-        const header = document.createElement('div');
-        header.className = 'd-flex justify-content-between gap-2';
-
         const title = document.createElement('h5');
         title.textContent = sourceCard.querySelector('h5')?.textContent.trim() || 'Project';
-        header.appendChild(title);
-
-        const sourceStatus = sourceCard.querySelector('.project-status');
-        if (sourceStatus) {
-          const status = document.createElement('span');
-          status.className = sourceStatus.className;
-          status.textContent = sourceStatus.textContent.trim();
-          header.appendChild(status);
-        }
-
-        card.appendChild(header);
+        card.appendChild(title);
 
         const description = document.createElement('p');
         description.textContent = sourceCard.querySelector(':scope > p')?.textContent.trim() || '';
