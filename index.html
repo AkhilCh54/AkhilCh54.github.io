@@ -11,9 +11,6 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Custom CSS -->
-  <link href="./static/css/custom.css" rel="stylesheet">
-
   <style>
     body {
       background-color: white;
@@ -86,56 +83,43 @@
     }
 
   </style>
+  <!-- Custom CSS (loaded last so the portfolio theme overrides Bootstrap defaults) -->
+  <link href="./static/css/custom.css" rel="stylesheet">
 </head>
-<body>
+<body class="light-mode home-page">
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg px-3 sticky-top" style="background-color: #ffffff;">
-  <a class="navbar-brand fw-bold" href="./">My Portfolio</a>
+  <a class="navbar-brand fw-bold" href="./">Akhil Cherukuri</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navMenu">
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="./">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- About Me -->
-<section class="container py-5 about-section">
-  <div class="row align-items-center">
-    <div class="col-md-5 mb-4 mb-md-0 text-center" data-aos="fade-right">
-      <img src="./static/img/me.jpg" alt="Akhil photo" class="profile-img img-fluid rounded-circle shadow-lg">
-    </div>
-    <div class="col-md-7" data-aos="fade-left">
-      <h2 class="display-5 fw-bold mb-3">About Me</h2>
-      <p class="mb-3">
-        I'm Akhil Satya Sai Cherukuri, a Computer Science student at the University of Texas at Arlington
-        focused on data engineering, artificial intelligence, and machine learning. I enjoy turning complex
-        data into reliable systems, practical insights, and tools that create real-world impact.
-      </p>
-      <div class="collapse" id="moreAboutMe">
-        <div class="card card-body shadow-sm border-0 mb-3">
-          <p class="mb-2">
-            My work spans machine learning and computational biology research, where I build neural-network
-            models, automate genomics pipelines with Python, and design SQL databases for large biological
-            datasets. I care about developing solutions that are both technically sound and genuinely useful.
-          </p>
-          <p class="mb-0">
-            Beyond technical projects, I serve the UTA community through undergraduate research outreach,
-            student advocacy, collaborative development, and event organization. I'm always eager to learn,
-            work with thoughtful teams, and apply data and AI to meaningful challenges.
-          </p>
-        </div>
-      </div>
-      <button id="toggleButton" class="btn btn-light btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#moreAboutMe" aria-expanded="false" aria-controls="moreAboutMe">
-        Read More
-      </button>
+<!-- Hero -->
+<header class="hero-section">
+  <div class="container hero-content" data-aos="fade-up">
+    <p class="hero-eyebrow">Computer Science · Data · Artificial Intelligence</p>
+    <h1>Akhil Satya Sai<br>Cherukuri</h1>
+    <p class="hero-title">Data Engineer &amp; Machine Learning Researcher</p>
+    <p class="hero-copy">
+      I build reliable data systems and practical machine-learning solutions that turn complex
+      information into measurable real-world impact.
+    </p>
+    <div class="hero-actions">
+      <a href="#recent-projects" class="btn btn-primary btn-lg">View Projects</a>
+      <a href="https://github.com/AkhilCh54" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-lg">
+        <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+      </a>
     </div>
   </div>
-</section>
+</header>
 
 <hr class="section-divider">
 
@@ -161,103 +145,126 @@
 <hr class="section-divider">
 
 <!-- Work Experience -->
-<section class="container py-5" id="Work_experience">
-  <h2 class="section-title mb-4">Work Experience</h2>
-  <div class="row align-items-start pb-4 mb-4 border-bottom">
-    <div class="col-md-2 text-center mb-3 mb-md-0">
-      <img src="./static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
+<section class="experience-section" id="Work_experience">
+  <div class="container py-5">
+    <div class="section-intro">
+      <div>
+        <p class="section-kicker">Where I've contributed</p>
+        <h2 class="section-title mb-0">Work Experience</h2>
+      </div>
+      <p>Research, engineering, and campus leadership focused on using technology to create practical impact.</p>
     </div>
-    <div class="col-md-10">
-      <h5 class="mb-1">Student Ambassador, Office of Undergraduate Research</h5>
-      <p class="text-muted mb-1" style="font-size: 0.95rem;">Work At UTA · Part-time</p>
-      <p class="text-muted mb-3" style="font-size: 0.9rem;">August 2026 – Present · Arlington, Texas · On-site</p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2">Represent the Office of Undergraduate Research at orientation and tabling events, introducing students to research opportunities and resources.</li>
-        <li class="mb-2">Manage the office's LinkedIn and Instagram presence, creating posts that promote research opportunities and events.</li>
-        <li>Monitor UTA channels for research opportunities, scholarships, fellowships, and relevant programs to share with students.</li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="row align-items-start pb-4 mb-4 border-bottom">
-    <div class="col-md-2 text-center mb-3 mb-md-0">
-      <img src="./static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
-    </div>
-    <div class="col-md-10">
-      <h5 class="mb-1">Research Intern – Machine Learning &amp; Computational Biology</h5>
-      <p class="text-muted mb-1" style="font-size: 0.95rem;">The University of Texas at Arlington · Apprenticeship</p>
-      <p class="text-muted mb-3" style="font-size: 0.9rem;">May 2025 – Present · Arlington, Texas · On-site</p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2">Develop and train neural network models to investigate lizard genomics, including unknown transposable elements.</li>
-        <li class="mb-2">Build Python scripts that automate genomics analysis pipelines, reducing manual processing by approximately 100 hours per month.</li>
-        <li class="mb-2">Design and query SQL databases containing 600,000+ biological records, improving data integrity and retrieval efficiency by 98%.</li>
-        <li class="mb-2">Collaborate with a PhD student to apply and refine bioinformatics methods for genomics research.</li>
-        <li>Create data visualizations and summarize analytical results for publications and laboratory presentations.</li>
-      </ul>
-    </div>
-  </div>
+    <div class="experience-timeline">
+      <article class="experience-item">
+        <div class="experience-marker" aria-hidden="true"></div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <p class="experience-company">UTA · Office of Undergraduate Research</p>
+              <h3>Student Ambassador</h3>
+            </div>
+            <span class="experience-date">Aug 2026 — Present</span>
+          </div>
+          <p class="experience-meta"><i class="fa-solid fa-location-dot"></i> Arlington, Texas · On-site · Part-time</p>
+          <ul>
+            <li>Introduce students to research opportunities and resources through orientations and outreach events.</li>
+            <li>Manage LinkedIn and Instagram content promoting research programs, scholarships, and fellowships.</li>
+          </ul>
+        </div>
+      </article>
 
-  <div class="row align-items-start pb-4 mb-4 border-bottom">
-    <div class="col-md-2 text-center mb-3 mb-md-0">
-      <img src="./static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
-    </div>
-    <div class="col-md-10">
-      <h5 class="mb-1">CSE Student Advisory Council Member</h5>
-      <p class="text-muted mb-1" style="font-size: 0.95rem;">The University of Texas at Arlington · Part-time</p>
-      <p class="text-muted mb-3" style="font-size: 0.9rem;">November 2025 – Present · Arlington, Texas · Hybrid</p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2">Serve on the first CSE Student Advisory Council and advocate for UTA's CSE student body.</li>
-        <li class="mb-2">Meet monthly with department leadership to discuss degree plans, industry relevance, and new degree programs.</li>
-        <li>Strengthen connections between CSE student organizations, students, and faculty.</li>
-      </ul>
-    </div>
-  </div>
+      <article class="experience-item experience-featured">
+        <div class="experience-marker" aria-hidden="true"></div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <p class="experience-company">The University of Texas at Arlington</p>
+              <h3>Research Intern — Machine Learning &amp; Computational Biology</h3>
+            </div>
+            <span class="experience-date">May 2025 — Present</span>
+          </div>
+          <p class="experience-meta"><i class="fa-solid fa-location-dot"></i> Arlington, Texas · On-site · Apprenticeship</p>
+          <ul>
+            <li>Develop neural-network models and bioinformatics methods to investigate lizard genomics and unknown transposable elements.</li>
+            <li>Automate genomics pipelines with Python, reducing manual processing by approximately <strong>100 hours per month</strong>.</li>
+            <li>Design and query SQL databases with <strong>600,000+ biological records</strong>, improving data integrity and retrieval efficiency by 98%.</li>
+          </ul>
+          <div class="experience-tags"><span>Python</span><span>Machine Learning</span><span>SQL</span><span>Bioinformatics</span></div>
+        </div>
+      </article>
 
-  <div class="row align-items-start pb-4 mb-4 border-bottom">
-    <div class="col-md-2 text-center mb-3 mb-md-0">
-      <img src="./static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
-    </div>
-    <div class="col-md-10">
-      <h5 class="mb-1">Developer, MOBI Club</h5>
-      <p class="text-muted mb-1" style="font-size: 0.95rem;">The University of Texas at Arlington · Part-time</p>
-      <p class="text-muted mb-3" style="font-size: 0.9rem;">August 2025 – Present · Arlington, Texas · On-site</p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2">Support MOBI officers in planning and executing projects, including semester-long Social Coding initiatives.</li>
-        <li class="mb-2">Assist officers with independent projects and ad hoc tasks to keep work progressing smoothly.</li>
-        <li>Collaborate with team members and volunteers to provide operational and technical support.</li>
-      </ul>
-    </div>
-  </div>
+      <article class="experience-item">
+        <div class="experience-marker" aria-hidden="true"></div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <p class="experience-company">UTA · Computer Science &amp; Engineering</p>
+              <h3>Student Advisory Council Member</h3>
+            </div>
+            <span class="experience-date">Nov 2025 — Present</span>
+          </div>
+          <p class="experience-meta"><i class="fa-solid fa-location-dot"></i> Arlington, Texas · Hybrid · Part-time</p>
+          <ul>
+            <li>Represent the CSE student body in monthly discussions with department leadership.</li>
+            <li>Advocate for relevant degree plans and stronger connections among students, organizations, and faculty.</li>
+          </ul>
+        </div>
+      </article>
 
-  <div class="row align-items-start pb-4 mb-4 border-bottom">
-    <div class="col-md-2 text-center mb-3 mb-md-0">
-      <img src="./static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
-    </div>
-    <div class="col-md-10">
-      <h5 class="mb-1">Datathon 2025 Organizer</h5>
-      <p class="text-muted mb-1" style="font-size: 0.95rem;">UT Arlington Libraries · Part-time</p>
-      <p class="text-muted mb-3" style="font-size: 0.9rem;">September 2024 – May 2025 · Arlington, Texas · On-site</p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2">Designed and executed creative campaigns to engage university and external audiences.</li>
-        <li class="mb-2">Managed social media strategy to increase event visibility and participation.</li>
-        <li>Coordinated logistics across cross-functional teams to support smooth event operations.</li>
-      </ul>
-    </div>
-  </div>
+      <article class="experience-item">
+        <div class="experience-marker" aria-hidden="true"></div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <p class="experience-company">UTA · MOBI Club</p>
+              <h3>Developer</h3>
+            </div>
+            <span class="experience-date">Aug 2025 — Present</span>
+          </div>
+          <p class="experience-meta"><i class="fa-solid fa-location-dot"></i> Arlington, Texas · On-site · Part-time</p>
+          <ul>
+            <li>Support semester-long Social Coding initiatives and independent technical projects.</li>
+            <li>Collaborate with officers, team members, and volunteers to keep development work moving.</li>
+          </ul>
+        </div>
+      </article>
 
-  <div class="row align-items-start">
-    <div class="col-md-2 text-center mb-3 mb-md-0">
-      <img src="./static/img/UTA_logo.png" class="img-fluid edu-logo" alt="UTA logo">
-    </div>
-    <div class="col-md-10">
-      <h5 class="mb-1">Development Team Member, Maverick Rover Team</h5>
-      <p class="text-muted mb-1" style="font-size: 0.95rem;">The University of Texas at Arlington · Part-time</p>
-      <p class="text-muted mb-3" style="font-size: 0.9rem;">September 2023 – February 2024 · Arlington, Texas · On-site</p>
-      <ul class="list-unstyled ps-3">
-        <li class="mb-2">Designed a user-friendly interface for remote rover control.</li>
-        <li class="mb-2">Helped establish rover-to-computer communication and optimized the interface for responsive navigation.</li>
-        <li>Assisted with troubleshooting and improving connection stability.</li>
-      </ul>
+      <article class="experience-item">
+        <div class="experience-marker" aria-hidden="true"></div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <p class="experience-company">UT Arlington Libraries</p>
+              <h3>Datathon 2025 Organizer</h3>
+            </div>
+            <span class="experience-date">Sep 2024 — May 2025</span>
+          </div>
+          <p class="experience-meta"><i class="fa-solid fa-location-dot"></i> Arlington, Texas · On-site · Part-time</p>
+          <ul>
+            <li>Designed audience-engagement campaigns and managed social media strategy.</li>
+            <li>Coordinated logistics across cross-functional teams to support smooth event operations.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <div class="experience-marker" aria-hidden="true"></div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div>
+              <p class="experience-company">UTA · Maverick Rover Team</p>
+              <h3>Development Team Member</h3>
+            </div>
+            <span class="experience-date">Sep 2023 — Feb 2024</span>
+          </div>
+          <p class="experience-meta"><i class="fa-solid fa-location-dot"></i> Arlington, Texas · On-site · Part-time</p>
+          <ul>
+            <li>Designed a user-friendly interface for remote rover control.</li>
+            <li>Improved rover-to-computer communication, responsiveness, and connection stability.</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -265,22 +272,30 @@
 <hr class="section-divider">
 
 <!-- Skills -->
-<section class="container py-5">
+<section class="container py-5 skills-section">
   <h2 class="section-title mb-4">Skills</h2>
   <div>
     <span class="badge bg-primary m-1">Python</span>
     <span class="badge bg-success m-1">Machine Learning</span>
-    <span class="badge bg-info text-dark m-1">HTML</span>
-    <span class="badge bg-warning text-dark m-1">CSS</span>
-    <span class="badge bg-danger m-1">JavaScript</span>
-    <span class="badge text-bg-secondary m-1">C</span>
-    <span class="badge text-bg-light m-1">Tableau</span>
-    <span class="badge text-bg-dark m-1">SQL</span>
-    <span class="badge bg-primary m-1">Flask</span>
-    <span class="badge bg-success m-1">Microsoft 365</span>
-    <span class="badge bg-info text-dark m-1">NLP</span>
-    <span class="badge bg-warning text-dark m-1">Technical Writing</span>
-    <span class="badge bg-danger m-1">Object Oriented Paradigm</span>
+    <span class="badge bg-info text-dark m-1">Deep Learning</span>
+    <span class="badge bg-warning text-dark m-1">Bioinformatics</span>
+    <span class="badge bg-danger m-1">Neural Networks</span>
+    <span class="badge text-bg-secondary m-1">scikit-learn</span>
+    <span class="badge text-bg-dark m-1">Pandas</span>
+    <span class="badge bg-primary m-1">NumPy</span>
+    <span class="badge bg-success m-1">SQL</span>
+    <span class="badge bg-info text-dark m-1">Data Analysis</span>
+    <span class="badge bg-warning text-dark m-1">Data Visualization</span>
+    <span class="badge bg-danger m-1">Tableau</span>
+    <span class="badge text-bg-secondary m-1">Flask</span>
+    <span class="badge text-bg-dark m-1">Git &amp; GitHub</span>
+    <span class="badge bg-primary m-1">HTML</span>
+    <span class="badge bg-success m-1">CSS</span>
+    <span class="badge bg-info text-dark m-1">JavaScript</span>
+    <span class="badge bg-warning text-dark m-1">Web Scraping</span>
+    <span class="badge bg-danger m-1">Selenium</span>
+    <span class="badge text-bg-secondary m-1">Object-Oriented Programming</span>
+    <span class="badge text-bg-dark m-1">Technical Writing</span>
   </div>
 </section>
 
@@ -337,9 +352,9 @@
   </div>
 </section>
 
-
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./static/js/header-scroll.js"></script>
 <!-- AOS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
@@ -399,19 +414,5 @@
 
   syncRecentProjects();
 </script>
-<!-- Read More toggle -->
-<script>
-  const toggleButton = document.getElementById('toggleButton');
-  const moreAboutMe = document.getElementById('moreAboutMe');
-
-  moreAboutMe.addEventListener('shown.bs.collapse', () => {
-    toggleButton.textContent = 'Less';
-  });
-
-  moreAboutMe.addEventListener('hidden.bs.collapse', () => {
-    toggleButton.textContent = 'Read More';
-  });
-</script>
-
 </body>
 </html>
